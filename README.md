@@ -11,7 +11,7 @@ Your csv file can be different from the one that is used in this project, so if 
 
 Update the csv file path.
 
-#### Run
+### Run
 If you are running this in DbSchema, just open a new SQL editor, change the interpreter to groovy script, and press 'run script'
 
 If you are running it in another environment, you have to create the connection string in groovy.
