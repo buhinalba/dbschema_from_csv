@@ -1,0 +1,30 @@
+Table,Name,Type,Length,PrimaryKey,Nullable,Unique,ForeignKey,Cardinality1,Reference table,Reference,Cardinality2,Delete ?
+Actor,ID,int4,10,Yes,No,No,,,,,native,No
+Actor,First_Name,varchar,255,No,Yes,No,,,,,,No
+Actor,Last_Name,varchar,255,No,Yes,No,,,,,,No
+Actor,Last_Update,timestamp,0,No,Yes,No,,,,,,No
+Film_Actor,FilmID,int4,10,No,No,No,Yes,Exactly One,Film,ID,Zero or More,No
+Film_Actor,ActorID,int4,10,No,No,No,Yes,Exactly One,Actor,ID,Zero or More,No
+Film_Actor,Last_Update,timestamp,0,No,Yes,No,,,,,,No
+Language,ID,int4,10,Yes,No,No,,,,,native,No
+Language,Name,varchar,20,No,Yes,No,,,,,,No
+Language,Last_Update,timestamp,0,No,Yes,No,,,,,,No
+Film,ID,int4,10,Yes,No,No,,,,,native,No
+Film,LanguageID,int4,10,No,No,No,Yes,Exactly One,Language,ID,Zero or More,No
+Film,Title,varchar,255,No,Yes,No,,,,,,No
+Film,Description,varchar,255,No,Yes,No,,,,,,No
+Film,Release_Year,int4,4,No,Yes,No,,,,,,No
+Film,Rental_Duration,int4,10,No,Yes,No,,,,,,No
+Film,Rental_Rate,numeric,19,No,Yes,No,,,,,,No
+Film,Length,int4,2,No,Yes,No,,,,,,No
+Film,Replacement_Cost,numeric,19,No,Yes,No,,,,,,No
+Film,Rating,int4,10,No,Yes,No,,,,,,No
+Film,Last_Update,timestamp,0,No,Yes,No,,,,,,No
+Film,Special_Features,varchar,255,No,Yes,No,,,,,,No
+Film,Fulltext,varchar,255,No,Yes,No,,,,,,No
+Film_Category,FilmID,int4,10,No,No,No,Yes,Exactly One,Film,ID,Zero or More,No
+Film_Category,CategoryID,int4,10,No,No,No,Yes,Exactly One,Category,ID,Zero or More,No
+Film_Category,Last_Update,timestamp,0,No,Yes,No,,,,,,No
+Category,ID,int4,10,Yes,No,No,,,,,,No
+Category,Name,varchar,25,No,Yes,No,,,,,,No
+Category,Last_Update,timestamp,0,No,Yes,No,,,,,,No
